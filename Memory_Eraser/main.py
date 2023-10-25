@@ -10,7 +10,7 @@ root.title("Memory Eraser")
 root.resizable(0,0)
 
 def update_progress_label(pb):
-    return f"Deleting Feelings >>>> {pb['value']}%"
+    return f"Deleting Memories >>>> {pb['value']}%"
 
 def delete_mem():
     del_button.config(state="disable")
@@ -31,7 +31,7 @@ def delete_mem():
             value_label['text'] = update_progress_label(pb)
         else:
             sleep(1)
-            showinfo(title="Warning",message='Unable to delete Memories\n Size is too Large')
+            showinfo(title="Warning",message='Unable to delete Memories !!!\n Size is too Large')
             root.destroy()
         root.after(100, start)
 
@@ -40,7 +40,7 @@ def delete_mem():
     root.after(100, start)
 
 
-img = ImageTk.PhotoImage(Image.open("C:/Users/INFRATECH/Desktop/tkinter/delete_feelings/bg.jpg")) 
+img = ImageTk.PhotoImage(Image.open("bg.jpg")) 
 win_background = Label(root,image=img).pack()
 
 win = Frame(root,height=300,width=400,bg="black").pack()
